@@ -9,3 +9,11 @@ class HelloAPIView(APIView):
             'message': 'Hello, World!'
         }
         return Response(data, status=status.HTTP_200_OK)
+    
+
+class NewAPIView(APIView):
+    def get(self, request):
+        data = {
+            'message': 'Microsoft Azure'
+        }
+        return Response(data, status=status.HTTP_200_OK)
