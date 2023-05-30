@@ -2,7 +2,9 @@ import logging
 from rest_framework.views import APIView
 from rest_framework.response import Response
 from rest_framework import status
-
+from rest_framework import viewsets
+from django.contrib.auth.models import User
+from .serializers import UserSerializer
 
 
 logger=logging.getLogger(__name__)
@@ -29,3 +31,12 @@ class NewAPIView(APIView):
         logger.info("This is NewAPIView End")
 
         return Response(data, status=status.HTTP_200_OK)
+
+
+#list of users
+# views.py
+
+
+class UserViewSet(viewsets.ModelViewSet):
+    queryset = User.objects.all()
+    serializer_class = UserSerializer

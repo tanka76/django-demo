@@ -83,6 +83,28 @@ WSGI_APPLICATION = 'root.wsgi.application'
 
 
 
+# DATABASES = {
+#     'default': {
+#         'ENGINE': 'django.db.backends.postgresql',
+#         'NAME': 'django_demo_db',
+#         'USER': 'postgres',
+#         'PASSWORD': 'postgres',
+#         'HOST': 'localhost',
+#         'PORT': '5432',
+#     }
+# }
+
+#remote server(Azure)
+DATABASES = {
+    'default': {
+        'ENGINE': 'django.db.backends.postgresql',
+        'NAME': 'django_demo_db',
+        'USER': 'admin1026',
+        'PASSWORD': 'Kathmandu@123',
+        'HOST': 'admintest.postgres.database.azure.com',
+        'PORT': '5432',
+    }
+}
 #Logging
 #All log are wriiten in debug.log file
 LOGGING = {
